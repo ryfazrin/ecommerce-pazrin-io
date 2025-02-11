@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+
 import Footer from "@/components/footer";
 import PageIntro from "@/components/page-intro";
 import ProductsFeatured from "@/components/products-featured";
@@ -8,20 +9,24 @@ import Layout from "../layouts/Main";
 
 const IndexPage = () => {
   useEffect(() => {
-    if (typeof window !== 'undefined' && (window as any).twttr) {
-      (window as any).twttr.widgets.load();  // Memuat widget Twitter setelah komponen dirender
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    if (typeof window !== "undefined" && (window as any).twttr) {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (window as any).twttr.widgets.load(); // Memuat widget Twitter setelah komponen dirender
     }
   }, []);
 
   const sendEvent = () => {
-    (window as any).fbq('track', 'PageView');
-  }
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    (window as any).fbq("track", "PageView");
+  };
 
   const gtmPush = () => {
-    const data = { event: 'button-click', some: { data: true } };
-    console.log('dataLayer.push()');
+    const data = { event: "button-click", some: { data: true } };
+    console.log("dataLayer.push()");
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     (window as any).dataLayer.push(data);
-  }
+  };
 
   return (
     <Layout>
@@ -41,11 +46,13 @@ const IndexPage = () => {
             </div>
           </article>
 
-          <section style={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-          }}>
+          <section
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+            }}
+          >
             {/* Google Tag Manager */}
             <div>
               <button onClick={gtmPush}>dataLayer.push()</button>
@@ -61,7 +68,10 @@ const IndexPage = () => {
                 <p lang="en" dir="ltr">
                   Just setting up my Twitter. #myfirstTweet
                 </p>
-                &mdash; Twitter Dev (@TwitterDev) <a href="https://twitter.com/ryfazrin/status/1504760897176174595">February 8, 2025</a>
+                &mdash; Twitter Dev (@TwitterDev){" "}
+                <a href="https://twitter.com/ryfazrin/status/1504760897176174595">
+                  February 8, 2025
+                </a>
               </blockquote>
 
               {/* Embed Timeline */}

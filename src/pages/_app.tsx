@@ -1,5 +1,4 @@
 // global styles
-import Script from "next/script";
 import "../assets/css/styles.scss";
 import "swiper/swiper.scss";
 import "rc-slider/assets/index.css";
@@ -9,6 +8,7 @@ import "react-rater/lib/react-rater.css";
 import type { AppProps } from "next/app";
 import { Poppins } from "next/font/google";
 import Router from "next/router";
+import Script from "next/script";
 import React, { Fragment } from "react";
 
 import { wrapper } from "../store";

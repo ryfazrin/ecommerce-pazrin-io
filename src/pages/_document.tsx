@@ -50,11 +50,7 @@ export default class CustomDocument extends Document<DocumentProps> {
             </>
           )}
           {/* Menambahkan script Twitter untuk embed widget */}
-          <script
-            async
-            src="https://platform.twitter.com/widgets.js"
-            charSet="utf-8"
-          />
+          <script async src="https://platform.twitter.com/widgets.js" />
         </Head>
         <body>
           <Main />
