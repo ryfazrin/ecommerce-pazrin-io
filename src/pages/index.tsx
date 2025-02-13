@@ -51,15 +51,16 @@ const IndexPage = () => {
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
+              gap: 20
             }}
           >
             {/* Google Tag Manager */}
             <div>
-              <button onClick={gtmPush}>dataLayer.push()</button>
+              <button type="button" className="btn btn--rounded btn--yellow" onClick={gtmPush}>dataLayer.push()</button>
             </div>
             {/* Facebook Pixel */}
             <div>
-              <button onClick={sendEvent}>fbq track & PageView</button>
+              <button type="button" className="btn btn--rounded btn--yellow" onClick={sendEvent}>fbq track & PageView</button>
             </div>
             {/* Embed Tweet */}
             <div>
