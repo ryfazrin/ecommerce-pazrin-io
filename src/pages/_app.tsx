@@ -36,7 +36,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => (
       }
     `}</style>
     {/* Google Tag Manager */}
-    <Script id="gtm" strategy="afterInteractive">
+    <Script id="gtm" type="text/fernflow" strategy="afterInteractive">
       {`
         (function (w, d, s, l, i) {
           w[l] = w[l] || [];
@@ -57,7 +57,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => (
       `}
     </Script>
     {/* Facebook Pixel */}
-    <Script id="facebook-pixel" strategy="afterInteractive">
+    <Script id="facebook-pixel" type="text/fernflow" strategy="afterInteractive">
       {`
         !function(f,b,e,v,n,t,s)
         {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
