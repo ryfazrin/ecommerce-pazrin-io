@@ -83,10 +83,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
         `}
       </Script>
       {/* Facebook Pixel */}
-      <Script
-        id="facebook-pixel"
-        strategy="afterInteractive"
-      >
+      <Script id="facebook-pixel" strategy="afterInteractive">
         {`
           !function(f,b,e,v,n,t,s)
           {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
